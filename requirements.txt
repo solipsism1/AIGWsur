@@ -1,0 +1,24 @@
+# Core
+numpy>=1.24
+scipy>=1.10
+torch>=2.0
+h5py>=3.8
+
+# Gravitational wave (data generation + match evaluation; Linux/WSL recommended)
+pycbc>=2.3
+lalsuite>=7.0
+
+# Model definition (legacy flow imports in src/models/flow.py)
+nflows>=0.14
+
+# Parameter-estimation demo (scripts/pe_demo)
+pyro-ppl>=1.9
+corner>=2.2
+
+# Visualization
+matplotlib>=3.7
+
+# Training utilities
+tensorboard>=2.13
+tqdm
+pyyaml

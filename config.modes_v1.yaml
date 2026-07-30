@@ -1,0 +1,83 @@
+# Inertial-frame mode surrogate (modes-v1).
+# Predicts per-mode SVD coefficients for all 21 modes (l<=4) of NRSur7dq4.
+# Compression: per-mode amp/phase SVD (real/imag for m=0 memory modes), total 3548 coeffs.
+# Allocation from scripts/size_modes_from_cache.py (amplitude-weighted, budget=6e-3).
+
+data:
+  approximant: NRSur7dq4
+  param_dim: 8
+  n_train: null
+  n_val: null
+  f_lower: 25.0
+  f_final: 1024.0
+  delta_f: 0.125
+  sample_rate: 4096.0
+  reference_total_mass: 50.0
+  q_range: [1.0, 4.0]
+  chi_mag_max: 0.8
+  sampling: sobol
+  sample_reference_omega: true
+  data_dir: data/
+
+compression:
+  method: per_mode_svd
+  ell_max: 4
+  include_m0: true
+  compressor_path: data/mode_compressor_v1.h5
+  # grid: ModeGrid(t_pre=4352, t_post=192, taper_len=192) -> N=4544
+  per_mode_n_basis:
+    "2:-2": 160
+    "2:-1": 160
+    "2:0": 160
+    "2:1": 160
+    "2:2": 160
+    "3:-3": 100
+    "3:-2": 160
+    "3:-1": 100
+    "3:0": 64
+    "3:1": 80
+    "3:2": 160
+    "3:3": 80
+    "4:-4": 32
+    "4:-3": 64
+    "4:-2": 24
+    "4:-1": 2
+    "4:0": 2
+    "4:1": 2
+    "4:2": 24
+    "4:3": 48
+    "4:4": 32
+
+model:
+  type: mode_resnet_regressor
+  param_dim: 8
+  hidden_dims: [512]
+  n_blocks: 6
+  dropout: 0.10
+  loss: huber
+  huber_delta: 0.5
+  loss_weighting: none
+  fourier_dim: 128
+  fourier_scale: 1.0
+
+training:
+  batch_size: 1024
+  lr: 3.0e-04
+  weight_decay: 0.003
+  scheduler: cosine
+  scheduler_min_lr: 1.0e-06
+  warmup_steps: 200
+  reset_optimizer_on_resume: true
+  max_epochs: 300
+  min_epochs: 0
+  patience: 300
+  early_stopping_min_delta: 1.0e-05
+  param_noise_std: 0.005
+  grad_clip: 1.5
+  keep_best_history: false
+  keep_checkpoint_interval: 0
+  plot_interval: 0
+
+evaluation:
+  match_threshold: 0.99
+  psd: aLIGOZeroDetHighPower

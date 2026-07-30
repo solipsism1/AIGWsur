@@ -1,0 +1,21 @@
+name: gw-pycbc
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - setuptools<81
+  - numpy>=1.24
+  - scipy>=1.10
+  - h5py>=3.8
+  - matplotlib>=3.7
+  - pyyaml
+  - tqdm
+  - pytorch-cpu>=2.0
+  - pycbc
+  - lalsuite
+  - python-lal
+  - python-lalsimulation
+  - pip:
+      - nflows>=0.14
+      - zuko>=1.0

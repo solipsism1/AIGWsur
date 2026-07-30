@@ -1,0 +1,65 @@
+# Production run: medium ResNet (n_blocks=6, hidden=512, ~3.4M params)
+# fourier_scale=1.0 — best from arch sweep.
+# Single cosine decay 1e-4 -> 1e-5 over 8000 epochs (no restarts — restarts hurt).
+# Resumes from val=0.1197 checkpoint (ep457).
+
+data:
+  approximant: NRSur7dq4
+  param_dim: 8
+  n_train: null
+  n_val: null
+  n_test: null
+  f_lower: 25.0
+  f_final: 1024.0
+  delta_f: 0.125
+  reference_total_mass: 50.0
+  q_range: [1.0, 4.0]
+  chi_mag_max: 0.8
+  sampling: sobol
+  sample_reference_omega: true
+  data_dir: D:/gw_waveform_data/nrsur7dq4_omega_8d_v3
+
+compression:
+  method: svd
+  representation: amp_phase
+  n_basis: 100
+  fit_strategy: random_subset
+  fit_n_samples: 10000
+  fit_seed: 42
+  svd_solver: auto
+
+model:
+  type: resnet_regressor
+  param_dim: 8
+  hidden_dims: [512]
+  n_blocks: 6
+  dropout: 0.20
+  loss: huber
+  huber_delta: 0.5
+  loss_weighting: none
+  fourier_dim: 128
+  fourier_scale: 1.0
+  output_tanh_scale: 10.0
+
+training:
+  batch_size: 2048
+  lr: 2.0e-05
+  weight_decay: 0.005
+  scheduler: cosine
+  scheduler_min_lr: 1.0e-06
+  warmup_steps: 0
+  reset_optimizer_on_resume: true
+  max_epochs: 8000
+  min_epochs: 0
+  patience: 2000
+  early_stopping_min_delta: 1.0e-05
+  param_noise_std: 0.005
+  grad_clip: 1.5
+  keep_best_history: false
+  keep_checkpoint_interval: 500
+  plot_interval: 500
+
+evaluation:
+  match_threshold: 0.99
+  psd: aLIGOZeroDetHighPower
+  n_benchmark_samples: 1000
