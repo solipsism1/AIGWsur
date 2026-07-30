@@ -95,10 +95,10 @@ from src.physics.projection import load_torch_strain_model
 cfg = yaml.safe_load(open("config.modes_v1.yaml"))
 tsm, stats = load_torch_strain_model("runs/modes_m5_600k_ft", cfg)
 
-# params_norm: (batch, 8) intrinsic parameters, min-max normalized to [0, 1]
+# params_norm: (batch, 8) intrinsic parameters normalized to [-1, 1]
 #   raw λ = (q, χ1x, χ1y, χ1z, χ2x, χ2y, χ2z, ω0)
 pmin, pmax = torch.tensor(stats["param_min"]), torch.tensor(stats["param_max"])
-params_norm = (params_raw - pmin) / (pmax - pmin)
+params_norm = 2.0 * (params_raw - pmin) / (pmax - pmin + 1e-10) - 1.0
 
 iota = torch.tensor([0.5]); phi = torch.tensor([0.0])
 h_fd = tsm.strain_fd(params_norm, iota, phi)   # differentiable h₊(f)
