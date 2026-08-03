@@ -88,6 +88,40 @@ The toddler adds essentially nothing to activity costs — the free-under-3/4 ru
 
 ---
 
+## Getting there — flight options from Germany (Deutschland-Ticket positioning)
+
+Since regional trains to any German airport are free with the Deutschland-Ticket, the question is which airport's schedule and fares win. Note: at age 2 the toddler now needs their own seat everywhere — Norwegian charges 75% of the adult fare for a child ticket; Widerøe also has international child discounts. Budget roughly 2.75 adult fares.
+
+### The route map (as of Aug 2026)
+
+| Airport | Airline | Direct? | Days (summer) | Fit for Sat Aug 22 → Tue Aug 25 |
+|---|---|---|---|---|
+| **Hamburg (HAM)** | Widerøe | Yes (seasonal, Jul–Oct) | **Tue, Thu, Sat, Sun** — dep ~11:15, arr 13:10 | **Perfect both ways** (Sat out, Tue back) |
+| **Berlin (BER)** | Norwegian | Yes | Outbound BER→BGO: **Thu, Sun** only; return BGO→BER: **Tue, Thu, Sun** | Outbound doesn't fit Sat; return Tue fits |
+| Hannover (HAJ) | — | No direct | connections via OSL/CPH only | Poor — connection + toddler, rarely cheaper |
+| Frankfurt/Munich | Lufthansa | Yes (8x/week FRA) | daily-ish | 6–8 h of regional trains from Hamburg — not realistic with a toddler |
+| Copenhagen (CPH) | SAS/Norwegian | Yes, frequent | daily | Not D-Ticket territory — €30–60 pp each way + ~5 h to reach; only worth it for a dramatic fare gap |
+
+### Assessment
+
+1. **Hamburg/Widerøe is the only option that matches your exact dates with zero positioning travel.** Sat 22nd out (11:15→13:10, lands with the whole afternoon left) and Tue 25th back. Midday departures are also the toddler-friendliest slots. Widerøe is typically the priciest of the three carriers, though — expect roughly €130–250 per adult each way in late August.
+
+2. **Berlin/Norwegian is usually the cheapest per seat (one-ways from ~€50–80 seen on this route), but the outbound schedule breaks your dates:** BER→BGO only flies Thursday and Sunday. Your options if you want the Berlin price:
+   - **Shift the trip to Thu Aug 20 → Tue Aug 25** (5 nights, all-Norwegian via BER), likely the cheapest per-seat combination — but more nights of lodging, and Hamburg→Berlin on the D-Ticket is ~4 h of regional trains each way with a 2-year-old.
+   - **Fly out Sun Aug 23** — loses a full trip day; not recommended for a 3-night trip.
+
+3. **The clever hybrid: open-jaw.** Out **HAM→BGO Sat with Widerøe** (one-way), back **BGO→BER Tue with Norwegian** (one-way, flies Tuesdays), then Berlin→Hamburg home on the D-Ticket (or ~€20–40 ICE saver fares booked early). This keeps your exact dates, captures the cheap Norwegian leg where Widerøe's return would be expensive, and costs only train time on the way home when schedule pressure is off. Price both this and the plain HAM round-trip.
+
+4. **Skip Hannover, Frankfurt, Munich, and Copenhagen** — no direct (HAJ), too far by regional train (FRA/MUC), or extra cross-border cost that D-Ticket doesn't cover (CPH).
+
+### Booking urgency and monitoring
+- The trip is ~3 weeks out and both routes are low-frequency seasonal services on small aircraft — fares on these rarely drop late; **book as soon as the totals are compared**, don't wait for a dip.
+- Compare in one sitting: Widerøe HAM–BGO round-trip vs. (Widerøe HAM→BGO one-way + Norwegian BGO→BER one-way). Norwegian's low-fare calendar shows the cheap days at a glance.
+- Set Google Flights price alerts on HAM–BGO and BER–BGO for your dates in case anything moves before you book.
+- Verify the exact August 22–25 times when booking — the Widerøe schedule block published for summer runs through Aug 23, so the Tue Aug 25 return time may differ slightly.
+
+---
+
 ## Sources
 - [visitBergen — family-friendly attractions](https://en.visitbergen.com/things-to-do/attractions/family-friendly)
 - [Fløyen official — prices and tickets](https://www.floyen.no/en/floibanen/prices-and-ticket-types)
@@ -102,3 +136,10 @@ The toddler adds essentially nothing to activity costs — the free-under-3/4 ru
 - [visitBergen — districts and neighborhoods](https://en.visitbergen.com/ideas-and-inspiration/explore-bergen/districts-and-neighborhoods-in-bergen-city-center)
 - [AllTrails — Fløyen–Skomakerdiket](https://www.alltrails.com/trail/norway/vestland/floyen-skomakerdiket)
 - [Norway Explained — best parks in Bergen for families](https://norwayexplained.com/best-parks-in-bergen-for-families-with-children/)
+- [FlightsFrom — HAM–BGO direct schedule (Widerøe)](https://www.flightsfrom.com/HAM-BGO)
+- [FlightMapper — WF1859 Hamburg→Bergen schedule](http://info.flightmapper.net/flight/Wideroe_WF_1859)
+- [FlightsFrom — BER–BGO direct schedule (Norwegian)](https://www.flightsfrom.com/BER-BGO)
+- [Norwegian low-fare calendar — Berlin→Bergen](https://www.norwegian.com/en/low-fare-calendar/BerlinBrandenburg-Bergen)
+- [Norwegian — child ticket discounts](https://www.norwegian.com/en/travel-info/travelling-with-children/discounts-for-children/)
+- [Widerøe — travelling with children](https://www.wideroe.no/en/travel-info/children)
+- [Skyscanner — BER–BGO fares](https://www.skyscanner.net/routes/ber/bgo/berlin-brandenburg-to-bergen.html)
