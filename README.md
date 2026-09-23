@@ -8,9 +8,18 @@ modes h_lm (l ≤ 4) over the 8-dimensional intrinsic parameter space
 (ι, φ) follow from an analytic, differentiable spin-weighted spherical-harmonic
 projection.
 
-**Paper:** _A fast, differentiable neural-network surrogate for precessing
-binary black-hole waveforms_, B. Modrekiladze (2026), submitted to arXiv.
+[![arXiv](https://img.shields.io/badge/arXiv-2608.09978-b31b1b.svg)](https://arxiv.org/abs/2608.09978)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+**Paper:** [_A fast, differentiable neural-network surrogate for precessing
+binary black-hole waveforms_](https://arxiv.org/abs/2608.09978), B. Modrekiladze (2026), arXiv:2608.09978.
 The `paper/` directory contains the source of the submitted version.
+
+This is step one of a two-step program. Matched filtering only finds signals
+that the template bank already contains ("we will only see what we expect to
+see"). A fast, differentiable surrogate frees the computational budget for step
+two: learning the distribution of gravitational-wave signals from data alone,
+without anchoring to a theoretical template (companion paper in preparation).
 
 ---
 
@@ -170,11 +179,20 @@ python scripts/pe_demo/plot_corner.py   # → paper/pe_corner.png
 ## Citation
 
 ```bibtex
-@article{Modrekiladze:2026,
-  author  = {Modrekiladze, Beka},
-  title   = {A fast, differentiable neural-network surrogate for precessing binary black-hole waveforms},
-  year    = {2026},
-  eprint  = {arXiv:XXXX.XXXXX},
-  note    = {submitted}
+@article{Modrekiladze:2026sur,
+  author        = {Modrekiladze, Beka},
+  title         = {A fast, differentiable neural-network surrogate for precessing binary black-hole waveforms},
+  year          = {2026},
+  eprint        = {2608.09978},
+  archivePrefix = {arXiv},
+  primaryClass  = {gr-qc}
 }
 ```
+
+## License
+
+MIT. See [LICENSE](LICENSE).
+
+## Author
+
+[Beka Modrekiladze](https://inspirehep.net/authors/1749389), DESY Hamburg · beka.modrekiladze@desy.de

@@ -11,6 +11,7 @@
 
 # --- Top-level files to keep ---
 !README.md
+!LICENSE
 !.gitignore
 !requirements.txt
 !config.long_8d_fs1_v3prod.yaml
